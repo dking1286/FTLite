@@ -1,0 +1,83 @@
+Backlog:
+	
+    
+    
+    
+    
+
+Ideas:
+    UserInterface has a method called "update" that automatically updates
+        the look of all of the bars, shots, etc. on the canvas
+    UserInterface has attributes called "shotList" and "weaponList" that
+        store a list of all of the shots and weapons that need to be drawn on the canvas
+    
+11/12/15:
+    Add _tasksToAdd attribute to Battle class to avoid the _tasks list being modified while
+        the loop is iterating through it
+    Add a description attirbute to the Weapon class
+    Add another button to fire a missile, which has a different speed and damage
+        than the laser
+    Add a makeButton method to the UserInterface class to simplify the process of
+        placing buttons on the canvas
+    Add custom getter and setter for the hull property of ships, not allowing
+        them to go less than 0 or greater than maxHull
+    Add to the _animate method of the Battle class to make the game end when one of the ships'
+        hull goes below 0
+    
+11/11/15:
+    Add a "coords" method to the Point class that returns the coordinates as
+        a 2-tuple
+    Add a "constants" module that contains all of the constants for the program,
+        like the positions of the fixed interface components
+    Move placing of the ship images on the canvas to be in the __init__ method of
+        UserInterface instead of Battle
+    Move "canvas" to be an attribute of the UserInterface class instead of Battle
+    Define Bar class to represent a display bar on the screen
+    Write an "update" method for Bar class that displays the new appropriate bar length
+        on the canvas
+    Write constructor for ShipControl class
+    Add a shipControl attribute to Battle class
+    Add a changeHull method to ShipControl class
+    Add a button to canvas to test the changeHull method and automatic updating of
+        Bar class {works!}
+    Add a border to Bar class
+    Write an "update" method for UserInterface class, and call this method in the
+        _animate method of Battle
+    Make a fire weapon button that calls the WeaponControl.fireWeapon method to
+        fire an (invisible) shot at the enemy ship
+    Make shot be visible in fireWeapon method
+11/09/15:
+    Implement a basic version of the user interface that does something simple
+		by passing the simple task to the _animate() method
+    Update Point class to use properties instead of getters and setters
+		and then update Ship classes to reflect the change
+11/08/15:
+	Write specifications for WeaponControl, ShipControl, and UserInterface classes
+	Write decorator @returnFun
+	Organize specifications and other documentation in a consistent manner
+	Add description attribute to Task class
+	
+	
+	
+10/25/15:
+        Make each Task have a 'state' variable that specifies whether it is upcoming, active, 
+	   or finished.	
+10/24/15:
+        Update Game specification for _addTask and _removeTask to include an integer argument
+            for the number of frames that task needs to execute
+        Update name of Game class to Battle
+        Define Task class to represent tasks to be done by animation
+        Define UpcomingTask class to represent a task that will occur in the future
+        Add _finishedTasks, _upcomingTasks, _noLongerUpcomingTasks lists to Battle class
+10/20/15:
+        Add + and - operator overloads to Point class
+        Implement public methods for displaying and moving images on canvas in Game class
+        Test Game.placeImageOnCanvas() by updating PlayerShip and EnemyShip classes
+        Write specifications for PlayerShip and EnemyShip
+10/18/15:
+	Make Point class safe with getter and setter methods
+	Update Ship class to reflect modifications to Point class
+	Write public methods for displaying and moving images on canvas in Game class specification
+	Update Ship class attribute names to reflect private and public
+	
+
